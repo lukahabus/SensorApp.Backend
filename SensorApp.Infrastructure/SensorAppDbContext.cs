@@ -14,16 +14,25 @@ namespace SensorApp.Infrastructure
 
         public DbSet<Sensor> Sensors { get; set; }
 
-        //protected override void onModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Sensor>().HasData(
-        //        new Sensor
-        //        {
-        //            Id= 1,
-        //            Humidity = 1,
-        //            Light = 1,
-        //            Temperature = 1
-        //        });
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Sensor>().HasData(
+                new Sensor
+                {
+                    Id = 1,
+                    Humidity = 1,
+                    Light = 1,
+                    Temperature = 1
+                });
+
+            modelBuilder.Entity<Sensor>().HasData(
+                new Sensor
+                {
+                    Id = 2,
+                    Humidity = 22,
+                    Light = 10,
+                    Temperature = 31
+                });
+        }
     }
 }

@@ -2,10 +2,12 @@
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace SensorApp.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,6 +25,15 @@ namespace SensorApp.Infrastructure.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Sensors", x => x.Id);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Sensors",
+                columns: new[] { "Id", "Humidity", "Light", "Temperature" },
+                values: new object[,]
+                {
+                    { 1L, 1f, 1f, 1f },
+                    { 2L, 22f, 10f, 31f }
                 });
         }
 

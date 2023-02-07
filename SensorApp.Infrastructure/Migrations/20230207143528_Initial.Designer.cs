@@ -11,8 +11,8 @@ using SensorApp.Infrastructure;
 namespace SensorApp.Infrastructure.Migrations
 {
     [DbContext(typeof(SensorAppDbContext))]
-    [Migration("20230207131822_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230207143528_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,22 @@ namespace SensorApp.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sensors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            Humidity = 1f,
+                            Light = 1f,
+                            Temperature = 1f
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            Humidity = 22f,
+                            Light = 10f,
+                            Temperature = 31f
+                        });
                 });
 #pragma warning restore 612, 618
         }
