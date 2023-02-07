@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nJqmaXuSA8GmQz0LXks4YFaqKRF3SbWdNblBZVnZ3bg=",
+  "Source": "SensorApp.API",
+  "BasePath": "_content/SensorApp.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

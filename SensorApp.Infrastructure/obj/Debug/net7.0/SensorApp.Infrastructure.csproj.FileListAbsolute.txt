@@ -1,0 +1,12 @@
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Infrastructure.deps.json
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Infrastructure.dll
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Infrastructure.pdb
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.AssemblyInfo.cs
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.dll
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\refint\SensorApp.Infrastructure.dll
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.pdb
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\ref\SensorApp.Infrastructure.dll
