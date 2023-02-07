@@ -20,7 +20,8 @@ namespace SensorApp.Infrastructure.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Humidity = table.Column<float>(type: "real", nullable: false),
                     Light = table.Column<float>(type: "real", nullable: false),
-                    Temperature = table.Column<float>(type: "real", nullable: false)
+                    Temperature = table.Column<float>(type: "real", nullable: false),
+                    SensorType = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -29,11 +30,11 @@ namespace SensorApp.Infrastructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Sensors",
-                columns: new[] { "Id", "Humidity", "Light", "Temperature" },
+                columns: new[] { "Id", "Humidity", "Light", "SensorType", "Temperature" },
                 values: new object[,]
                 {
-                    { 1L, 1f, 1f, 1f },
-                    { 2L, 22f, 10f, 31f }
+                    { 1L, 1f, 1f, "Temperature", 1f },
+                    { 2L, 22f, 10f, "Humidity", 31f }
                 });
         }
 

@@ -35,6 +35,9 @@ namespace SensorApp.Infrastructure.Migrations
                     b.Property<float>("Light")
                         .HasColumnType("real");
 
+                    b.Property<string>("SensorType")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<float>("Temperature")
                         .HasColumnType("real");
 
@@ -48,6 +51,7 @@ namespace SensorApp.Infrastructure.Migrations
                             Id = 1L,
                             Humidity = 1f,
                             Light = 1f,
+                            SensorType = "Temperature",
                             Temperature = 1f
                         },
                         new
@@ -55,6 +59,7 @@ namespace SensorApp.Infrastructure.Migrations
                             Id = 2L,
                             Humidity = 22f,
                             Light = 10f,
+                            SensorType = "Humidity",
                             Temperature = 31f
                         });
                 });

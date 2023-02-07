@@ -1,6 +1,8 @@
 ﻿using SensorApp.Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
+using SensorApp.Core.Entities;
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,8 @@ namespace SensorApp.Infrastructure
                     Id = 1,
                     Humidity = 1,
                     Light = 1,
-                    Temperature = 1
+                    Temperature = 1,
+                    SensorType = "Temperature"
                 });
 
             modelBuilder.Entity<Sensor>().HasData(
@@ -31,7 +34,8 @@ namespace SensorApp.Infrastructure
                     Id = 2,
                     Humidity = 22,
                     Light = 10,
-                    Temperature = 31
+                    Temperature = 31,
+                    SensorType = "Humidity"
                 });
         }
     }

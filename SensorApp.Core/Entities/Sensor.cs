@@ -8,6 +8,13 @@ using System.Threading.Tasks;
 
 namespace SensorApp.Core.Entities
 {
+    //public enum SensorType
+    //{
+    //    Humidity,
+    //    Light,
+    //    Temperature
+    //}
+
     public class Sensor
     {
         public long Id { get; set; }
@@ -17,5 +24,11 @@ namespace SensorApp.Core.Entities
         public float Light { get; set; }
 
         public float Temperature { get; set; }
+
+        public float TemperatureF => (float)(32 + (Temperature / 0.5556));
+
+        //public SensorType SensorType { get; set; }
+
+        public string SensorType { get; set; }
     }
 }
