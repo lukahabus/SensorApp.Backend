@@ -17,6 +17,15 @@ builder.Services.AddDbContext<SensorAppDbContext>(configure => configure.UseSqlS
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider
+        .GetRequiredService<SensorAppDbContext>();
+
+    // Here is the migration executed
+    dbContext.Database.Migrate();
+}
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

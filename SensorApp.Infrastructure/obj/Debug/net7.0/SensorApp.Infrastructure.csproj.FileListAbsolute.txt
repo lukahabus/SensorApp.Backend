@@ -12,3 +12,6 @@ C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Deb
 C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\ref\SensorApp.Infrastructure.dll
 C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Infrastructure.runtimeconfig.json
 C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.genruntimeconfig.cache
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Core.dll
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\bin\Debug\net7.0\SensorApp.Core.pdb
+C:\Users\Student\source\repos\SensorApp.Backend\SensorApp.Infrastructure\obj\Debug\net7.0\SensorApp.Infrastructure.csproj.CopyComplete

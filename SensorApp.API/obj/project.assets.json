@@ -1255,12 +1255,23 @@
           }
         }
       },
+      "SensorApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/SensorApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SensorApp.Core.dll": {}
+        }
+      },
       "SensorApp.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "SensorApp.Core": "1.0.0"
         },
         "compile": {
           "bin/placeholder/SensorApp.Infrastructure.dll": {}
@@ -3949,6 +3960,11 @@
         "version.txt"
       ]
     },
+    "SensorApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../SensorApp.Core/SensorApp.Core.csproj",
+      "msbuildProject": "../SensorApp.Core/SensorApp.Core.csproj"
+    },
     "SensorApp.Infrastructure/1.0.0": {
       "type": "project",
       "path": "../SensorApp.Infrastructure/SensorApp.Infrastructure.csproj",
@@ -3962,6 +3978,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.2",
+      "SensorApp.Core >= 1.0.0",
       "SensorApp.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -3998,6 +4015,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "C:\\Users\\Student\\source\\repos\\SensorApp.Backend\\SensorApp.Core\\SensorApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Student\\source\\repos\\SensorApp.Backend\\SensorApp.Core\\SensorApp.Core.csproj"
+            },
             "C:\\Users\\Student\\source\\repos\\SensorApp.Backend\\SensorApp.Infrastructure\\SensorApp.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\Student\\source\\repos\\SensorApp.Backend\\SensorApp.Infrastructure\\SensorApp.Infrastructure.csproj"
             }

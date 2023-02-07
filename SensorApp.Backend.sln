@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorApp.Core", "SensorApp.Core\SensorApp.Core.csproj", "{151D4A0D-8C1E-44C5-B03E-1EA17B2BCA59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorApp.Infrastructure", "SensorApp.Infrastructure\SensorApp.Infrastructure.csproj", "{5EEB99F1-3493-44C0-9E1A-3C55958765AD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{151D4A0D-8C1E-44C5-B03E-1EA17B2BCA59} = {151D4A0D-8C1E-44C5-B03E-1EA17B2BCA59}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
