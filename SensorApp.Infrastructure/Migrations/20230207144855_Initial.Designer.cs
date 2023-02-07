@@ -11,7 +11,7 @@ using SensorApp.Infrastructure;
 namespace SensorApp.Infrastructure.Migrations
 {
     [DbContext(typeof(SensorAppDbContext))]
-    [Migration("20230207143528_Initial")]
+    [Migration("20230207144855_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
