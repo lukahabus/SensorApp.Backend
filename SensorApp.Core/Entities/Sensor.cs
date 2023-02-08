@@ -7,15 +7,7 @@ using System.Threading.Tasks;
 #nullable disable
 
 namespace SensorApp.Core.Entities
-{
-    //public enum SensorType
-    //{
-    //    Humidity,
-    //    Light,
-    //    Temperature
-    //}
-
-    public class Sensor
+{   public class Sensor
     {
         public long Id { get; set; }
 
@@ -63,7 +55,13 @@ namespace SensorApp.Core.Entities
                 }
                 else throw new ArgumentOutOfRangeException(nameof(Value));
             }
-            else throw new ArgumentException("There is no " + SensorType + "Sensor");
+            else throw new ArgumentException("There is no " + SensorType + " Sensor");
+        }
+
+        public void changeRange(int RangeStart, int RangeEnd)
+        {
+            this.RangeStart = RangeStart;
+            this.RangeEnd = RangeEnd;
         }
     }
 }

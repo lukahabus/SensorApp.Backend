@@ -9,4 +9,10 @@ namespace SensorApp.API.Models
         int RangeEnd,
         float Value
      );
+
+    public record DropdownModel(
+        long Id,
+        string SensorType,
+        float Value
+     );
 }

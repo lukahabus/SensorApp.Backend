@@ -28,12 +28,52 @@ namespace SensorApp.API.Controllers
             return Ok(sensors);
         }
 
+        [HttpGet("dropdown")]
+        public async Task<ActionResult<List<DropdownModel>>> GetSensorsDropdown()
+        {
+            var sensorsDropdown = await _dbContext.Sensors.Select(x => new DropdownModel(x.Id, x.SensorType, x.Value)).ToListAsync();
+
+            return Ok(sensorsDropdown);
+        }
+
         [HttpGet("{id}")]
         public async Task<ActionResult<SensorModel>> GetSensor(long id)
         {
             var sensor = await _dbContext.Sensors.FirstOrDefaultAsync(x => x.Id == id);
             if (sensor is null)
                 return BadRequest("Sensor doesn't exist");
+
+            return Ok(new SensorModel(sensor.Id, sensor.SensorType, sensor.RangeStart, sensor.RangeEnd, sensor.Value));
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<SensorModel>> UpdateSensor([FromBody] SensorModel sensorModel)
+        {
+            var sensor = await _dbContext.Sensors.FirstOrDefaultAsync(x => x.Id == sensorModel.Id);
+            if (sensor is null)
+                return BadRequest("Sensor doesn't exist");
+
+            sensor.SensorType = sensorModel.SensorType;
+            sensor.RangeStart = sensorModel.RangeStart;
+            sensor.RangeEnd = sensorModel.RangeEnd;
+            sensor.Value = sensorModel.Value;
+
+            _dbContext.Entry(sensor).State = EntityState.Modified;
+
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(sensorModel);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<SensorModel>> AddSensor([FromBody] SensorModel sensorModel)
+        {
+            var sensor = new Sensor(sensorModel.Id, sensorModel.SensorType, sensorModel.Value);
+            sensor.changeRange(sensorModel.RangeStart, sensorModel.RangeEnd);
+
+            _dbContext.Sensors.Add(sensor);
+
+            await _dbContext.SaveChangesAsync();
 
             return Ok(new SensorModel(sensor.Id, sensor.SensorType, sensor.RangeStart, sensor.RangeEnd, sensor.Value));
         }
