@@ -15,9 +15,6 @@ builder.Services.AddDbContext<SensorAppDbContext>(configure => configure.UseSqlS
     options.MigrationsAssembly(typeof(SensorAppDbContext).Assembly.FullName);
 }));
 
-builder.Services.AddCors();
-//builder.Services.AddMvc();
-
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -41,12 +38,5 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-// Make sure you call this before calling app.UseMvc()
-app.UseCors(
-    options => options.WithOrigins("*").AllowAnyMethod()
-);
-
-//app.UseMvc();
 
 app.Run();
