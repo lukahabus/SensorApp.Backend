@@ -7,7 +7,7 @@
 namespace SensorApp.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -18,10 +18,10 @@ namespace SensorApp.Infrastructure.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Humidity = table.Column<float>(type: "real", nullable: false),
-                    Light = table.Column<float>(type: "real", nullable: false),
-                    Temperature = table.Column<float>(type: "real", nullable: false),
-                    SensorType = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    SensorType = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RangeStart = table.Column<int>(type: "int", nullable: false),
+                    RangeEnd = table.Column<int>(type: "int", nullable: false),
+                    Value = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,11 +30,11 @@ namespace SensorApp.Infrastructure.Migrations
 
             migrationBuilder.InsertData(
                 table: "Sensors",
-                columns: new[] { "Id", "Humidity", "Light", "SensorType", "Temperature" },
+                columns: new[] { "Id", "RangeEnd", "RangeStart", "SensorType", "Value" },
                 values: new object[,]
                 {
-                    { 1L, 1f, 1f, "Temperature", 1f },
-                    { 2L, 22f, 10f, "Humidity", 31f }
+                    { 1L, 650, -240, "Temperature", 200f },
+                    { 2L, 100, 0, "Humidity", 30f }
                 });
         }
 

@@ -19,16 +19,51 @@ namespace SensorApp.Core.Entities
     {
         public long Id { get; set; }
 
-        public float Humidity { get; set; }
-
-        public float Light { get; set; }
-
-        public float Temperature { get; set; }
-
-        public float TemperatureF => (float)(32 + (Temperature / 0.5556));
-
         //public SensorType SensorType { get; set; }
 
         public string SensorType { get; set; }
+
+        public int RangeStart { get; set; }
+
+        public int RangeEnd { get; set; }
+
+        public float Value { get; set; }
+
+        public Sensor(long Id, string SensorType, float Value) { 
+            this.Id = Id;
+            this.SensorType = SensorType;
+            if(SensorType == null) throw new ArgumentNullException(nameof(SensorType));
+            else if (SensorType.Equals("Humidity")) 
+            {  
+                RangeStart = 0; 
+                RangeEnd = 100;
+                if(Value >= RangeStart && Value <= RangeEnd) { 
+                    this.Value = Value;
+                }
+                else throw new ArgumentOutOfRangeException(nameof(Value));
+                
+            }
+            else if (SensorType.Equals("Light")) 
+            { 
+                RangeStart = 0; 
+                RangeEnd = 1000000;
+                if (Value >= RangeStart && Value <= RangeEnd)
+                {
+                    this.Value = Value;
+                }
+                else throw new ArgumentOutOfRangeException(nameof(Value));
+            }
+            else if (SensorType.Equals("Temperature")) 
+            { 
+                RangeStart = -240; 
+                RangeEnd = 650;
+                if (Value >= RangeStart && Value <= RangeEnd)
+                {
+                    this.Value = Value;
+                }
+                else throw new ArgumentOutOfRangeException(nameof(Value));
+            }
+            else throw new ArgumentException("There is no " + SensorType + "Sensor");
+        }
     }
 }

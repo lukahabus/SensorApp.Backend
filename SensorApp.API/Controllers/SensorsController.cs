@@ -23,7 +23,7 @@ namespace SensorApp.API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<SensorModel>>> GetSensors()
         {
-            var sensors = await _dbContext.Sensors.Select(x => new SensorModel(x.Id, x.Humidity, x.Light, x.Temperature, x.TemperatureF, x.SensorType)).ToListAsync();
+            var sensors = await _dbContext.Sensors.Select(x => new SensorModel(x.Id, x.SensorType, x.RangeStart, x.RangeEnd, x.Value)).ToListAsync();
             
             return Ok(sensors);
         }
@@ -35,7 +35,7 @@ namespace SensorApp.API.Controllers
             if (sensor is null)
                 return BadRequest("Sensor doesn't exist");
 
-            return Ok(new SensorModel(sensor.Id, sensor.Humidity, sensor.Light, sensor.Temperature, sensor.TemperatureF, sensor.SensorType));
+            return Ok(new SensorModel(sensor.Id, sensor.SensorType, sensor.RangeStart, sensor.RangeEnd, sensor.Value));
         }
     }
 }

@@ -11,8 +11,8 @@ using SensorApp.Infrastructure;
 namespace SensorApp.Infrastructure.Migrations
 {
     [DbContext(typeof(SensorAppDbContext))]
-    [Migration("20230207155704_Initial")]
-    partial class Initial
+    [Migration("20230208091634_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,16 +32,16 @@ namespace SensorApp.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<float>("Humidity")
-                        .HasColumnType("real");
+                    b.Property<int>("RangeEnd")
+                        .HasColumnType("int");
 
-                    b.Property<float>("Light")
-                        .HasColumnType("real");
+                    b.Property<int>("RangeStart")
+                        .HasColumnType("int");
 
                     b.Property<string>("SensorType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Temperature")
+                    b.Property<float>("Value")
                         .HasColumnType("real");
 
                     b.HasKey("Id");
@@ -52,18 +52,18 @@ namespace SensorApp.Infrastructure.Migrations
                         new
                         {
                             Id = 1L,
-                            Humidity = 1f,
-                            Light = 1f,
+                            RangeEnd = 650,
+                            RangeStart = -240,
                             SensorType = "Temperature",
-                            Temperature = 1f
+                            Value = 200f
                         },
                         new
                         {
                             Id = 2L,
-                            Humidity = 22f,
-                            Light = 10f,
+                            RangeEnd = 100,
+                            RangeStart = 0,
                             SensorType = "Humidity",
-                            Temperature = 31f
+                            Value = 30f
                         });
                 });
 #pragma warning restore 612, 618
