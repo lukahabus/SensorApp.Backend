@@ -22,6 +22,9 @@ namespace SensorApp.Infrastructure
 
             modelBuilder.Entity<Sensor>().HasData(
                 new Sensor(2, "Humidity", 30));
+
+            modelBuilder.Entity<Sensor>().HasData(
+                new Sensor(3, "Light", 450));
         }
     }
 }
