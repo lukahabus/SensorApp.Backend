@@ -17,14 +17,18 @@ namespace SensorApp.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Sensor>().HasData(
-                new Sensor(1, "Temperature", 200));
+            string[] SensorTypes = { "Temperature", "Humidity", "Light" };
+            int[] RangeStart = { -240, 0, 0 };
+            int[] RangeEnd = { 650, 100, 1000000 };
 
-            modelBuilder.Entity<Sensor>().HasData(
-                new Sensor(2, "Humidity", 30));
+            Random rd= new Random();
 
-            modelBuilder.Entity<Sensor>().HasData(
-                new Sensor(3, "Light", 450));
+            for (int i = 1; i <= 30; i++)
+            {
+                int T = rd.Next() % 3;
+                modelBuilder.Entity<Sensor>().HasData(
+                    new Sensor(i, SensorTypes[T], rd.Next(RangeStart[T], RangeEnd[T])));
+            }
         }
     }
 }
