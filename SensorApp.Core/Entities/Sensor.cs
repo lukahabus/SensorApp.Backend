@@ -32,7 +32,7 @@ namespace SensorApp.Core.Entities
                 if(Value >= RangeStart && Value <= RangeEnd) { 
                     this.Value = Value;
                 }
-                else throw new ArgumentOutOfRangeException(nameof(Value));
+                //else throw new ArgumentOutOfRangeException(nameof(Value));
                 
             }
             else if (SensorType.Equals("Light")) 
@@ -43,7 +43,7 @@ namespace SensorApp.Core.Entities
                 {
                     this.Value = Value;
                 }
-                else throw new ArgumentOutOfRangeException(nameof(Value));
+                //else throw new ArgumentOutOfRangeException(nameof(Value));
             }
             else if (SensorType.Equals("Temperature")) 
             { 
@@ -53,7 +53,7 @@ namespace SensorApp.Core.Entities
                 {
                     this.Value = Value;
                 }
-                else throw new ArgumentOutOfRangeException(nameof(Value));
+                //else throw new ArgumentOutOfRangeException(nameof(Value));
             }
             else throw new ArgumentException("There is no " + SensorType + " Sensor");
         }

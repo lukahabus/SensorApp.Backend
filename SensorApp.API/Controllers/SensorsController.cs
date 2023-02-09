@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApplicationModels;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace SensorApp.API.Controllers
 {
@@ -76,6 +77,21 @@ namespace SensorApp.API.Controllers
             await _dbContext.SaveChangesAsync();
 
             return Ok(new SensorModel(sensor.Id, sensor.SensorType, sensor.RangeStart, sensor.RangeEnd, sensor.Value));
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<SensorModel>> DeleteSensor(long id)
+        {
+            var sensor = await _dbContext.Sensors.FirstOrDefaultAsync(x => x.Id == id);
+            if (sensor is null)
+                return BadRequest("Sensor doesn't exist");
+            else
+            {
+                _dbContext.Sensors.Remove(sensor);
+            }
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(sensor);
         }
     }
 }
