@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SensorApp.Infrastructure;
 
@@ -10,9 +11,11 @@ using SensorApp.Infrastructure;
 namespace SensorApp.Infrastructure.Migrations
 {
     [DbContext(typeof(SensorAppDbContext))]
-    partial class SensorAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230209144417_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

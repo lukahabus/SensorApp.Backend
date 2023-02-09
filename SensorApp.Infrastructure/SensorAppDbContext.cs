@@ -21,13 +21,13 @@ namespace SensorApp.Infrastructure
             int[] RangeStart = { -240, 0, 0 };
             int[] RangeEnd = { 650, 100, 1000000 };
 
-            Random rd= new Random();
+            Random rd = new Random();
 
-            for (int i = 1; i <= 30; i++)
+            for (int i = 0; i < 50; i++)
             {
                 int T = rd.Next() % 3;
                 modelBuilder.Entity<Sensor>().HasData(
-                    new Sensor(i, SensorTypes[T], rd.Next(RangeStart[T], RangeEnd[T])));
+                    new Sensor(rd.Next(1000, 9999), SensorTypes[T], rd.Next(RangeStart[T], RangeEnd[T])));
             }
         }
     }
