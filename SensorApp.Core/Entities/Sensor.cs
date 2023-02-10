@@ -55,7 +55,7 @@ namespace SensorApp.Core.Entities
                 }
                 //else throw new ArgumentOutOfRangeException(nameof(Value));
             }
-            else throw new ArgumentException("There is no " + SensorType + " Sensor");
+            //else throw new ArgumentException("There is no " + SensorType + " Sensor");
         }
 
         public void changeRange(int RangeStart, int RangeEnd)
