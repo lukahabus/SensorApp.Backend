@@ -48,183 +48,39 @@ namespace SensorApp.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = 8843L,
-                            RangeEnd = 100,
+                            Id = 7676L,
+                            RangeEnd = 1000000,
                             RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 51f
+                            SensorType = "Light",
+                            Value = 603670f
                         },
                         new
                         {
-                            Id = 9691L,
+                            Id = 4693L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 166084f
+                        },
+                        new
+                        {
+                            Id = 6829L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = -192f
+                            Value = 182f
                         },
                         new
                         {
-                            Id = 4411L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 766701f
-                        },
-                        new
-                        {
-                            Id = 1227L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 920220f
-                        },
-                        new
-                        {
-                            Id = 2043L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 82f
-                        },
-                        new
-                        {
-                            Id = 8768L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 5f
-                        },
-                        new
-                        {
-                            Id = 8255L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 786735f
-                        },
-                        new
-                        {
-                            Id = 6662L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 435698f
-                        },
-                        new
-                        {
-                            Id = 7498L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 656384f
-                        },
-                        new
-                        {
-                            Id = 8742L,
+                            Id = 5855L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 173f
+                            Value = 593f
                         },
                         new
                         {
-                            Id = 2994L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 91f
-                        },
-                        new
-                        {
-                            Id = 1991L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 444195f
-                        },
-                        new
-                        {
-                            Id = 8087L,
-                            RangeEnd = 650,
-                            RangeStart = -240,
-                            SensorType = "Temperature",
-                            Value = -90f
-                        },
-                        new
-                        {
-                            Id = 1107L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 314554f
-                        },
-                        new
-                        {
-                            Id = 7565L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 254401f
-                        },
-                        new
-                        {
-                            Id = 1421L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 89f
-                        },
-                        new
-                        {
-                            Id = 8711L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 913081f
-                        },
-                        new
-                        {
-                            Id = 9032L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 728076f
-                        },
-                        new
-                        {
-                            Id = 7196L,
-                            RangeEnd = 650,
-                            RangeStart = -240,
-                            SensorType = "Temperature",
-                            Value = 621f
-                        },
-                        new
-                        {
-                            Id = 2223L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 714229f
-                        },
-                        new
-                        {
-                            Id = 5179L,
-                            RangeEnd = 650,
-                            RangeStart = -240,
-                            SensorType = "Temperature",
-                            Value = -195f
-                        },
-                        new
-                        {
-                            Id = 2666L,
-                            RangeEnd = 650,
-                            RangeStart = -240,
-                            SensorType = "Temperature",
-                            Value = -96f
-                        },
-                        new
-                        {
-                            Id = 1889L,
+                            Id = 9810L,
                             RangeEnd = 100,
                             RangeStart = 0,
                             SensorType = "Humidity",
@@ -232,219 +88,363 @@ namespace SensorApp.Infrastructure.Migrations
                         },
                         new
                         {
-                            Id = 5896L,
+                            Id = 7472L,
                             RangeEnd = 1000000,
                             RangeStart = 0,
                             SensorType = "Light",
-                            Value = 772492f
+                            Value = 26370f
                         },
                         new
                         {
-                            Id = 4776L,
+                            Id = 7275L,
                             RangeEnd = 1000000,
                             RangeStart = 0,
                             SensorType = "Light",
-                            Value = 967743f
+                            Value = 313963f
                         },
                         new
                         {
-                            Id = 9683L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 59f
-                        },
-                        new
-                        {
-                            Id = 5697L,
+                            Id = 2068L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 145f
+                            Value = 108f
                         },
                         new
                         {
-                            Id = 6740L,
-                            RangeEnd = 1000000,
+                            Id = 2287L,
+                            RangeEnd = 100,
                             RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 413739f
+                            SensorType = "Humidity",
+                            Value = 60f
                         },
                         new
                         {
-                            Id = 9312L,
+                            Id = 8837L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = -197f
+                            Value = 87f
                         },
                         new
                         {
-                            Id = 6643L,
+                            Id = 5002L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 54f
+                        },
+                        new
+                        {
+                            Id = 8099L,
                             RangeEnd = 1000000,
                             RangeStart = 0,
                             SensorType = "Light",
-                            Value = 519022f
+                            Value = 533453f
                         },
                         new
                         {
-                            Id = 7044L,
+                            Id = 3191L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 648391f
+                        },
+                        new
+                        {
+                            Id = 2581L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = -76f
+                            Value = 186f
                         },
                         new
                         {
-                            Id = 1302L,
+                            Id = 8060L,
                             RangeEnd = 100,
                             RangeStart = 0,
                             SensorType = "Humidity",
-                            Value = 68f
+                            Value = 97f
                         },
                         new
                         {
-                            Id = 1638L,
-                            RangeEnd = 1000000,
+                            Id = 3021L,
+                            RangeEnd = 100,
                             RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 599353f
+                            SensorType = "Humidity",
+                            Value = 72f
                         },
                         new
                         {
-                            Id = 8147L,
+                            Id = 5916L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 53f
+                        },
+                        new
+                        {
+                            Id = 7701L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 58f
+                        },
+                        new
+                        {
+                            Id = 7050L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 44f
+                        },
+                        new
+                        {
+                            Id = 9918L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 41f
+                            Value = -225f
                         },
                         new
                         {
-                            Id = 6258L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 0f
-                        },
-                        new
-                        {
-                            Id = 1396L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 71f
-                        },
-                        new
-                        {
-                            Id = 5953L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 21f
-                        },
-                        new
-                        {
-                            Id = 9707L,
+                            Id = 9750L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 21f
+                            Value = 464f
                         },
                         new
                         {
-                            Id = 2908L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 57f
-                        },
-                        new
-                        {
-                            Id = 4096L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 859618f
-                        },
-                        new
-                        {
-                            Id = 1526L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 402113f
-                        },
-                        new
-                        {
-                            Id = 6146L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 9f
-                        },
-                        new
-                        {
-                            Id = 5287L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 898754f
-                        },
-                        new
-                        {
-                            Id = 9027L,
-                            RangeEnd = 100,
-                            RangeStart = 0,
-                            SensorType = "Humidity",
-                            Value = 26f
-                        },
-                        new
-                        {
-                            Id = 7682L,
-                            RangeEnd = 1000000,
-                            RangeStart = 0,
-                            SensorType = "Light",
-                            Value = 570066f
-                        },
-                        new
-                        {
-                            Id = 2596L,
+                            Id = 2859L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 260f
+                            Value = 395f
                         },
                         new
                         {
-                            Id = 6922L,
+                            Id = 3900L,
                             RangeEnd = 100,
                             RangeStart = 0,
                             SensorType = "Humidity",
-                            Value = 39f
+                            Value = 48f
                         },
                         new
                         {
-                            Id = 1591L,
+                            Id = 1315L,
                             RangeEnd = 650,
                             RangeStart = -240,
                             SensorType = "Temperature",
-                            Value = 21f
+                            Value = 390f
                         },
                         new
                         {
-                            Id = 9646L,
+                            Id = 6863L,
                             RangeEnd = 1000000,
                             RangeStart = 0,
                             SensorType = "Light",
-                            Value = 52203f
+                            Value = 300262f
                         },
                         new
                         {
-                            Id = 5315L,
+                            Id = 8179L,
                             RangeEnd = 1000000,
                             RangeStart = 0,
                             SensorType = "Light",
-                            Value = 311194f
+                            Value = 4464f
+                        },
+                        new
+                        {
+                            Id = 9559L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 170f
+                        },
+                        new
+                        {
+                            Id = 9694L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 32f
+                        },
+                        new
+                        {
+                            Id = 5049L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 65f
+                        },
+                        new
+                        {
+                            Id = 8688L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 193326f
+                        },
+                        new
+                        {
+                            Id = 5773L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 458732f
+                        },
+                        new
+                        {
+                            Id = 9129L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 664018f
+                        },
+                        new
+                        {
+                            Id = 1755L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 48f
+                        },
+                        new
+                        {
+                            Id = 6218L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 817381f
+                        },
+                        new
+                        {
+                            Id = 4503L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = -91f
+                        },
+                        new
+                        {
+                            Id = 2830L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 516f
+                        },
+                        new
+                        {
+                            Id = 5655L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 44f
+                        },
+                        new
+                        {
+                            Id = 1623L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 45f
+                        },
+                        new
+                        {
+                            Id = 7415L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 898567f
+                        },
+                        new
+                        {
+                            Id = 7976L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 10f
+                        },
+                        new
+                        {
+                            Id = 6199L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 123642f
+                        },
+                        new
+                        {
+                            Id = 9450L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 807216f
+                        },
+                        new
+                        {
+                            Id = 9136L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 7f
+                        },
+                        new
+                        {
+                            Id = 8352L,
+                            RangeEnd = 1000000,
+                            RangeStart = 0,
+                            SensorType = "Light",
+                            Value = 919611f
+                        },
+                        new
+                        {
+                            Id = 1736L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 200f
+                        },
+                        new
+                        {
+                            Id = 1645L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 404f
+                        },
+                        new
+                        {
+                            Id = 8947L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = -56f
+                        },
+                        new
+                        {
+                            Id = 8248L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 633f
+                        },
+                        new
+                        {
+                            Id = 5155L,
+                            RangeEnd = 650,
+                            RangeStart = -240,
+                            SensorType = "Temperature",
+                            Value = 385f
+                        },
+                        new
+                        {
+                            Id = 7177L,
+                            RangeEnd = 100,
+                            RangeStart = 0,
+                            SensorType = "Humidity",
+                            Value = 15f
                         });
                 });
 #pragma warning restore 612, 618

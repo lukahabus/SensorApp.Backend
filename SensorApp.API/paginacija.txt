@@ -1,0 +1,41 @@
+﻿Backend paginacija
+ 
+Metoda mora primiti(maxRowsDisplayed: int, firstIndex: int, sordOrder: string)
+Primjer:
+firstIndex i sordOrder se dohvaćaju putem:
+@ViewChild(MatPaginator) paginator: MatPaginator;
+@ViewChild(MatSort) sort: MatSort; 
+-> pogledaj dokumentaciju
+ 
+
+ 
+
+Prva iteracija
+maxRowsDisplayed = 10;
+firstIndex = 0;
+sordOrder = "asc"
+Druga iteracija
+maxRowsDisplayed = 10;
+firstIndex = 10;
+sordOrder = "asc"
+ 
+
+ 
+
+Lambda zahtjev za firstIndex:
+query.Skip(0);
+Lambda zahtjev za broj redova koji se dohvaćaju:
+query.Take(10);
+ 
+
+var data = _dbContext.Documents.Skip(0).Take(10).OrderByDescending(x=>x.UploadedOn).ToList();
+ 
+Metoda sa backenda, frontendu mora vraćati (i ukupan broj dohvaćenih podataka) -> 
+lambda -> Count(); i mapiraj ih na frontendu u globalnu varijablu resultsLength = 0;
+<mat-paginator [length]="resultsLength" [pageSize]="30"....>
+ 
+public class GetDocumentsResponse
+    {
+        public List<DocumentModel> Data { get; set; }
+        public int TotalRecords { get; set; }
+    }
